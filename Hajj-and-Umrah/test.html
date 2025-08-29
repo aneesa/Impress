@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Test - Hajj and Umrah Presentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #f4d03f 0%, #e67e22 25%, #d35400 50%, #a04000 75%, #8b4513 100%);
+            color: white;
+        }
+        .test-container {
+            background: rgba(255, 248, 220, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            color: #8b4513;
+            margin: 20px 0;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .success { background: rgba(46, 204, 113, 0.2); color: #27ae60; }
+        .error { background: rgba(231, 76, 60, 0.2); color: #c0392b; }
+        .warning { background: rgba(243, 156, 18, 0.2); color: #f39c12; }
+        .button {
+            display: inline-block;
+            background: #d35400;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .button:hover { background: #a04000; }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🕋 Browser Compatibility Test</h1>
+        <p><strong>Testing your browser for Hajj and Umrah Presentation compatibility</strong></p>
+        
+        <div id="test-results">
+            <h3>Test Results:</h3>
+            <div id="css-test" class="status">Testing CSS support...</div>
+            <div id="js-test" class="status">Testing JavaScript support...</div>
+            <div id="impress-test" class="status">Testing impress.js compatibility...</div>
+            <div id="images-test" class="status">Testing image loading...</div>
+        </div>
+
+        <h3>Quick Actions:</h3>
+        <a href="hajj-and-umrah.html" class="button">🚀 Try Main Presentation</a>
+        <a href="index.html" class="button">🏠 Go to Landing Page</a>
+        <button onclick="location.reload()" class="button">🔄 Refresh Test</button>
+
+        <h3>Browser-Specific Solutions:</h3>
+        <div class="test-container">
+            <h4>Chrome/Edge:</h4>
+            <ul>
+                <li>Press F12 to open Developer Tools</li>
+                <li>Check Console tab for errors</li>
+                <li>Try incognito/private mode</li>
+            </ul>
+            
+            <h4>Firefox:</h4>
+            <ul>
+                <li>Press F12 to open Developer Tools</li>
+                <li>Check Console tab for errors</li>
+                <li>Try private browsing mode</li>
+            </ul>
+            
+            <h4>Safari:</h4>
+            <ul>
+                <li>Enable Developer menu in Preferences > Advanced</li>
+                <li>Press Cmd+Option+I to open Developer Tools</li>
+                <li>Check Console tab for errors</li>
+            </ul>
+        </div>
+
+        <h3>Common Issues:</h3>
+        <ul>
+            <li><strong>Blank page:</strong> Check browser console for JavaScript errors</li>
+            <li><strong>No styling:</strong> CSS files might not be loading</li>
+            <li><strong>No images:</strong> Image paths might be incorrect</li>
+            <li><strong>Navigation not working:</strong> JavaScript might be disabled</li>
+        </ul>
+    </div>
+
+    <script>
+        // Test CSS support
+        function testCSS() {
+            const testDiv = document.getElementById('css-test');
+            try {
+                const testElement = document.createElement('div');
+                testElement.style.cssText = 'transform: translate3d(0,0,0); transition: all 0.3s;';
+                testDiv.innerHTML = '✅ CSS3 transforms and transitions supported';
+                testDiv.className = 'status success';
+            } catch (e) {
+                testDiv.innerHTML = '❌ CSS3 support issues detected';
+                testDiv.className = 'status error';
+            }
+        }
+
+        // Test JavaScript support
+        function testJS() {
+            const testDiv = document.getElementById('js-test');
+            try {
+                // Test basic JavaScript functionality
+                const testArray = [1, 2, 3];
+                testArray.forEach(item => item * 2);
+                testDiv.innerHTML = '✅ JavaScript fully supported';
+                testDiv.className = 'status success';
+            } catch (e) {
+                testDiv.innerHTML = '❌ JavaScript issues detected';
+                testDiv.className = 'status error';
+            }
+        }
+
+        // Test impress.js compatibility
+        function testImpress() {
+            const testDiv = document.getElementById('impress-test');
+            try {
+                // Check if impress.js file exists
+                const script = document.createElement('script');
+                script.src = 'js/impress.js';
+                script.onload = function() {
+                    testDiv.innerHTML = '✅ impress.js loaded successfully';
+                    testDiv.className = 'status success';
+                };
+                script.onerror = function() {
+                    testDiv.innerHTML = '❌ impress.js failed to load';
+                    testDiv.className = 'status error';
+                };
+                document.head.appendChild(script);
+            } catch (e) {
+                testDiv.innerHTML = '❌ impress.js compatibility issues';
+                testDiv.className = 'status error';
+            }
+        }
+
+        // Test image loading
+        function testImages() {
+            const testDiv = document.getElementById('images-test');
+            const testImage = new Image();
+            testImage.onload = function() {
+                testDiv.innerHTML = '✅ Images loading correctly';
+                testDiv.className = 'status success';
+            };
+            testImage.onerror = function() {
+                testDiv.innerHTML = '❌ Image loading issues detected';
+                testDiv.className = 'status error';
+            };
+            testImage.src = 'pics/kaabah.jpg';
+        }
+
+        // Run all tests when page loads
+        window.onload = function() {
+            setTimeout(testCSS, 100);
+            setTimeout(testJS, 200);
+            setTimeout(testImpress, 300);
+            setTimeout(testImages, 400);
+        };
+    </script>
+</body>
+</html> 

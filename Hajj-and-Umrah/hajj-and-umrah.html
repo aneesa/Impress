@@ -1,0 +1,1373 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Hajj and Umrah - Aneesa Awaludin</title>
+
+    <meta name="description" content="Hajj and Umrah presentation by Aneesa Awaludin" />
+    <meta name="author" content="Aneesa Awaludin" />
+
+    <link
+        href="//fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic"
+        rel="stylesheet" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link href="css/impress-common.css" rel="stylesheet" />
+
+    <style>
+        /* Custom styling for Hajj and Umrah presentation */
+        body {
+            background: linear-gradient(135deg, #f4d03f 0%, #e67e22 25%, #d35400 50%, #a04000 75%, #8b4513 100%);
+            font-family: 'PT Serif', serif;
+        }
+
+        .hajj-slide {
+            text-align: center;
+            padding: 60px;
+            background: rgba(255, 248, 220, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(210, 180, 140, 0.3);
+            width: 900px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hajj-slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="sand" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23d2b48c" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23sand)"/></svg>');
+            pointer-events: none;
+            border-radius: 15px;
+        }
+
+        .main-title {
+            font-size: 2em;
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(139, 69, 19, 0.2);
+            position: relative;
+            z-index: 1;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.25em;
+            color: #a0522d;
+            font-style: italic;
+            margin-top: 15px;
+            position: relative;
+            z-index: 1;
+            letter-spacing: 1px;
+        }
+
+        .hajj-slide::after {
+            content: '☀';
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 2em;
+            color: #f39c12;
+            opacity: 0.7;
+        }
+
+        /* Content slide styling */
+        .content-slide {
+            text-align: left;
+            padding: 20px;
+            background: transparent;
+            border-radius: 0;
+            box-shadow: none;
+            backdrop-filter: none;
+            border: none;
+            width: 95vw;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content-slide::before {
+            display: none;
+        }
+
+        .slide-title {
+            font-size: 2em;
+            font-weight: bold;
+            color: #fff;
+            margin: 0 0 20px 0;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+            position: relative;
+            z-index: 1;
+            padding: 20px 30px;
+            background: rgba(0, 0, 0, 0.1);
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            width: 95%;
+            box-sizing: border-box;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .slide-content {
+            position: relative;
+            z-index: 1;
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #fff;
+            flex-grow: 1;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            width: 95%;
+            box-sizing: border-box;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .slide-content ul {
+            margin: 0 0 30px 0;
+            padding-left: 30px;
+        }
+
+        .slide-content li {
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .slide-content p {
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Solid content slide - no transparency */
+        .content-slide.solid .slide-content {
+            background: rgba(139, 69, 19, 0.9);
+        }
+
+        .content-slide.solid .slide-title {
+            background: rgba(139, 69, 19, 0.9);
+        }
+
+        /* Image styling for Ka'bah slide */
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            max-width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .kabah-image {
+            max-width: 100%;
+            max-height: 70vh;
+            width: auto;
+            height: auto;
+            min-width: 300px;
+            min-height: 200px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            object-fit: contain;
+            object-position: center;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .image-caption {
+            margin-top: 15px !important;
+            font-size: 0.9em !important;
+            font-style: italic;
+            text-align: center;
+            color: inherit;
+            max-width: 100%;
+            word-wrap: break-word;
+        }
+
+        .image-container {
+            cursor: pointer;
+        }
+
+        /* Timeline animation styles */
+        .timeline-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            padding: 80px 0;
+            min-height: 200px;
+        }
+
+        .timeline {
+            width: 80%;
+            height: 8px;
+            background: linear-gradient(90deg, #f4d03f, #e67e22, #d35400, #a04000, #8b4513);
+            border-radius: 4px;
+            position: relative;
+            overflow: visible;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            margin: 60px 0;
+        }
+
+        .timeline-progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #f39c12, #e74c3c, #c0392b);
+            border-radius: 4px;
+            animation: timelineProgress 8s ease-in-out infinite;
+            box-shadow: 0 0 20px rgba(243, 156, 18, 0.6);
+        }
+
+        @keyframes timelineProgress {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        .timeline-sections {
+            position: absolute;
+            top: -8px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .timeline-section {
+            width: 33.33%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            opacity: 1;
+            transform: translateY(0);
+            position: relative;
+        }
+
+        .timeline-section:first-child {
+            margin-left: 0;
+        }
+
+        .timeline-section:last-child {
+            margin-right: 0;
+        }
+
+        .timeline-section:nth-child(2),
+        .timeline-section:nth-child(3) {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .end-marker {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .end-label {
+            position: absolute;
+            right: 0;
+            top: 20px;
+        }
+
+        .timeline-section:nth-child(1) {
+            animation: fadeInUp 0.5s ease-out 0.5s forwards;
+        }
+
+        .timeline-section:nth-child(2) {
+            animation: fadeInUp 0.5s ease-out 2s forwards;
+        }
+
+        .timeline-section:nth-child(3) {
+            animation: fadeInUp 0.5s ease-out 4s forwards;
+        }
+
+        .end-marker {
+            animation: fadeInUp 0.5s ease-out 6s forwards;
+        }
+
+        .end-label {
+            animation: fadeInUp 0.5s ease-out 6s forwards;
+        }
+
+        .timeline-markers {
+            position: absolute;
+            top: -8px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .marker-label {
+            font-size: 0.5em;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            white-space: normal;
+            padding: 2px 3px;
+            border-radius: 3px;
+            backdrop-filter: blur(5px);
+            margin-top: 20px;
+            line-height: 1.2;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .marker-dot {
+            width: 16px;
+            height: 16px;
+            background: #fff;
+            border: 4px solid #8b4513;
+            border-radius: 50%;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            z-index: 15;
+        }
+
+        .marker-label {
+            width: 100%;
+            font-size: 0.5em;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            white-space: normal;
+            padding: 2px 3px;
+            border-radius: 3px;
+            backdrop-filter: blur(5px);
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.3s ease;
+            line-height: 1.2;
+        }
+
+        .marker-label.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .timeline-info {
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: #fff;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            animation: fadeIn 1s ease-out 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .kabah-icon {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3em;
+            animation: kabahPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes kabahPulse {
+
+            0%,
+            100% {
+                transform: translateX(-50%) scale(1);
+                filter: brightness(1);
+            }
+
+            50% {
+                transform: translateX(-50%) scale(1.1);
+                filter: brightness(1.2);
+            }
+        }
+
+        .kabah-icon::before {
+            content: '🕋';
+        }
+
+        .kabah-icon {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .kabah-icon:hover {
+            transform: translateX(-50%) scale(1.2);
+        }
+
+        .kabah-icon.clicked {
+            animation: kabahClicked 0.5s ease-out;
+        }
+
+        @keyframes kabahClicked {
+            0% {
+                transform: translateX(-50%) scale(1.2);
+            }
+
+            50% {
+                transform: translateX(-50%) scale(0.8);
+            }
+
+            100% {
+                transform: translateX(-50%) scale(1);
+            }
+        }
+
+        .timeline {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+
+        .timeline.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Islamic Calendar Circle */
+        .calendar-circle {
+            position: relative;
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .calendar-circle::before {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 4px solid rgba(244, 208, 63, 0.6);
+            border-radius: 50%;
+            box-shadow: 0 0 30px rgba(244, 208, 63, 0.3);
+            animation: ringPulse 3s ease-in-out infinite;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .calendar-circle::before:hover {
+            border-color: rgba(244, 208, 63, 0.9);
+            box-shadow: 0 0 40px rgba(244, 208, 63, 0.5);
+            transform: scale(1.05);
+        }
+
+        @keyframes ringPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+
+            50% {
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
+        }
+
+        .month-circle-item {
+            position: absolute;
+            background: rgba(139, 69, 19, 0.8);
+            border-radius: 8px;
+            padding: 6px 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            font-size: 0.35em;
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            white-space: nowrap;
+            transform: rotate(var(--angle)) translateY(-220px) rotate(calc(-1 * var(--angle)));
+            z-index: 10;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .month-circle-item.show {
+            animation: flyInMonth 1.2s ease-out forwards;
+            pointer-events: auto;
+        }
+
+        /* Pilgrim Conditions */
+        .pilgrim-conditions {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .condition-item {
+            display: flex;
+            align-items: center;
+            background: rgba(139, 69, 19, 0.8);
+            border-radius: 8px;
+            padding: 12px 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: slideInCondition 0.8s ease-out forwards;
+        }
+
+        .condition-item:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .condition-item:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .condition-item:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .condition-item:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        .condition-item:nth-child(5) {
+            animation-delay: 1.0s;
+        }
+
+        @keyframes slideInCondition {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .condition-icon {
+            font-size: 0.5em;
+            margin-right: 15px;
+            animation: iconBounce 2s ease-in-out infinite;
+        }
+
+        @keyframes iconBounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-3px);
+            }
+        }
+
+        .condition-text {
+            font-size: 0.5em;
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            line-height: 1.3;
+        }
+
+        .condition-item:hover {
+            transform: translateX(10px);
+            background: rgba(139, 69, 19, 0.9);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        /* Journey Animation */
+        .journey-animation {
+            position: relative;
+            width: 800px;
+            height: 150px;
+            margin: 30px auto 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hotel {
+            font-size: 3em;
+            animation: hotelGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes hotelGlow {
+
+            0%,
+            100% {
+                filter: brightness(1);
+            }
+
+            50% {
+                filter: brightness(1.3);
+            }
+        }
+
+        .bus {
+            font-size: 2.5em;
+            position: absolute;
+            left: 150px;
+            animation: busTravel 4s ease-in-out infinite;
+        }
+
+        @keyframes busTravel {
+            0% {
+                left: 175px;
+                transform: scaleX(-1) scale(1);
+            }
+
+            25% {
+                left: 300px;
+                transform: scaleX(-1) scale(1.1);
+            }
+
+            50% {
+                left: 450px;
+                transform: scaleX(-1) scale(1);
+            }
+
+            75% {
+                left: 450px;
+                transform: scaleX(-1) scale(1.1);
+            }
+
+            100% {
+                left: 450px;
+                transform: scaleX(-1) scale(1);
+            }
+        }
+
+
+
+        .tent {
+            font-size: 3em;
+            animation: tentWave 2s ease-in-out infinite;
+        }
+
+        @keyframes tentWave {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(-2deg);
+            }
+
+            75% {
+                transform: rotate(2deg);
+            }
+        }
+
+        .journey-steps {
+            margin-top: 20px !important;
+            font-size: 0.6em;
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .journey-steps li {
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        
+        /* Smaller font for Umrah slide */
+        #umrah .journey-steps {
+            font-size: 0.5em;
+        }
+        
+        #umrah .journey-steps li {
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        
+        /* Ihram Images */
+        .ihram-images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .ihram-image {
+            max-width: 62%;
+            max-height: 80vh;
+            width: auto;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            object-fit: contain;
+            object-position: center;
+        }
+        
+        /* Masyair Map Image */
+        .masyair-image {
+            max-width: 70%;
+            max-height: 70vh;
+            width: auto;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            object-fit: contain;
+            object-position: center;
+        }
+        
+        /* Final Rituals */
+        .final-rituals {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 120px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        .ritual-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .ritual-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            animation: ritualPulse 3s ease-in-out infinite;
+        }
+        
+        .sand-hills {
+            display: flex;
+            gap: 20px;
+            align-items: flex-end;
+        }
+        
+        .sand-hill {
+            width: 0;
+            height: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-bottom: 90px solid #d2b48c;
+        }
+        
+        @keyframes ritualPulse {
+            0%, 100% { 
+                transform: scale(1);
+                filter: brightness(1);
+            }
+            50% { 
+                transform: scale(1.1);
+                filter: brightness(1.2);
+            }
+        }
+        
+
+
+        .month-circle-item:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .month-circle-item:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .month-circle-item:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .month-circle-item:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        .month-circle-item:nth-child(5) {
+            animation-delay: 1.0s;
+        }
+
+        .month-circle-item:nth-child(6) {
+            animation-delay: 1.2s;
+        }
+
+        .month-circle-item:nth-child(7) {
+            animation-delay: 1.4s;
+        }
+
+        .month-circle-item:nth-child(8) {
+            animation-delay: 1.6s;
+        }
+
+        .month-circle-item:nth-child(9) {
+            animation-delay: 1.8s;
+        }
+
+        .month-circle-item:nth-child(10) {
+            animation-delay: 2.0s;
+        }
+
+        .month-circle-item:nth-child(11) {
+            animation-delay: 2.2s;
+        }
+
+        .month-circle-item:nth-child(12) {
+            animation-delay: 2.4s;
+        }
+
+        @keyframes flyInMonth {
+            0% {
+                opacity: 0;
+                transform: rotate(var(--angle)) translateY(-50px) rotate(calc(-1 * var(--angle))) scale(0.5);
+            }
+
+            50% {
+                opacity: 0.7;
+                transform: rotate(var(--angle)) translateY(-250px) rotate(calc(-1 * var(--angle))) scale(1.1);
+            }
+
+            100% {
+                opacity: 1;
+                transform: rotate(var(--angle)) translateY(-220px) rotate(calc(-1 * var(--angle))) scale(1);
+            }
+        }
+
+        .month-circle-item:hover {
+            transform: rotate(var(--angle)) translateY(-240px) rotate(calc(-1 * var(--angle))) scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            background: rgba(139, 69, 19, 0.9);
+        }
+    </style>
+
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a
+            simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
+
+    <div id="impress" data-transition-duration="1000" data-width="1024" data-height="768" data-max-scale="3"
+        data-min-scale="0" data-perspective="1000">
+
+        <div id="hajj-and-umrah" class="step hajj-slide" data-x="0" data-y="0" data-rotate="0" data-scale="1">
+            <div class="main-title">Hajj and Umrah</div>
+            <div class="subtitle">Aneesa Awaludin</div>
+        </div>
+
+        <div id="hajj-definition" class="step content-slide" data-x="0" data-y="800" data-rotate="0" data-scale="1">
+            <div class="slide-title">Hajj</div>
+            <div class="slide-content">
+                <p>Hajj is the pilgrimage to the Sacred House (Ka'bah) in Makkah during the months of Hajj to perform
+                    specific acts of worship according to its prescribed conditions.</p>
+            </div>
+        </div>
+
+        <div id="hajj-malay-definition" class="step content-slide" data-x="0" data-y="1600" data-rotate="0"
+            data-scale="1">
+            <div class="slide-content">
+                <p>Haji ialah mengunjungi Baitullah Al-Haram (Ka'bah) di Makkah pada bulan-bulan Haji untuk mengerjakan
+                    ibadat-ibadat tertentu menurut syarat-syaratnya.</p>
+            </div>
+        </div>
+
+        <div id="umrah-definition" class="step content-slide" data-x="0" data-y="2400" data-rotate="0" data-scale="1">
+            <div class="slide-title">Umrah</div>
+            <div class="slide-content">
+                <p>Umrah is the pilgrimage to the Sacred House (Ka'bah) in Makkah at any time to perform specific acts
+                    of worship according to its prescribed conditions.</p>
+            </div>
+        </div>
+
+        <div id="umrah-malay-definition" class="step content-slide" data-x="0" data-y="3200" data-rotate="0"
+            data-scale="1">
+            <div class="slide-content">
+                <p>Umrah ialah mengunjungi Baitullah Al-Haram (Ka'bah) di Makkah pada bila-bila masa untuk mengerjakan
+                    ibadat tertentu menurut syarat-syaratnya.</p>
+            </div>
+        </div>
+
+        <div id="pilgrims" class="step content-slide" data-x="0" data-y="4000" data-rotate="0" data-scale="1">
+            <div class="slide-title">The Pilgrims</div>
+            <div class="slide-content">
+                <div class="pilgrim-conditions">
+                    <div class="condition-item">
+                        <div class="condition-icon">🕌</div>
+                        <div class="condition-text">Muslim</div>
+                    </div>
+                    <div class="condition-item">
+                        <div class="condition-icon">👤</div>
+                        <div class="condition-text">Has reached puberty (mature)</div>
+                    </div>
+                    <div class="condition-item">
+                        <div class="condition-icon">🧠</div>
+                        <div class="condition-text">Sane (of sound mind)</div>
+                    </div>
+                    <div class="condition-item">
+                        <div class="condition-icon">🕊️</div>
+                        <div class="condition-text">Free (not a slave)</div>
+                    </div>
+                    <div class="condition-item">
+                        <div class="condition-icon">💪</div>
+                        <div class="condition-text">Capable and has the means (istito'ah)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ka'bah-pic" class="step content-slide" data-x="0" data-y="4800" data-rotate="0" data-scale="1">
+            <div class="slide-title">Ka'bah</div>
+            <div class="slide-content">
+                <div class="image-container" onclick="nextImage(event)">
+                    <img id="kabah-slideshow" src="pics/kaabah.jpg" alt="The Holy Ka'bah" class="kabah-image">
+                    <p class="image-caption" id="image-caption">The Holy Ka'bah in Masjid al-Haram, Makkah</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="months-of-hajj" class="step content-slide" data-x="0" data-y="5600" data-rotate="0" data-scale="1">
+            <div class="slide-title">Months of Hajj</div>
+            <div class="slide-content">
+                <div class="timeline-container">
+                    <div class="kabah-icon"></div>
+                    <div class="timeline">
+                        <div class="timeline-progress"></div>
+                        <div class="timeline-markers">
+                            <div class="marker-label">1st<br>Syawal</div>
+                            <div class="marker-label">1st<br>Zulkaedah</div>
+                            <div class="marker-label">1st<br>Zulhijjah</div>
+                            <div class="marker-label">Dawn 10th<br>Zulhijjah</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="islamic-calendar-months" class="step content-slide" data-x="0" data-y="6400" data-rotate="0"
+            data-scale="1">
+            <div class="slide-title">Islamic Calendar</div>
+            <div class="slide-content">
+                <div class="calendar-circle">
+                    <div class="month-circle-item" style="--angle: 0deg">1. Muharram</div>
+                    <div class="month-circle-item" style="--angle: 30deg">2. Safar</div>
+                    <div class="month-circle-item" style="--angle: 60deg">3. Rabiul Awal</div>
+                    <div class="month-circle-item" style="--angle: 90deg">4. Rabiul Akhir</div>
+                    <div class="month-circle-item" style="--angle: 120deg">5. Jamadil Awal</div>
+                    <div class="month-circle-item" style="--angle: 150deg">6. Jamadil Akhir</div>
+                    <div class="month-circle-item" style="--angle: 180deg">7. Rejab</div>
+                    <div class="month-circle-item" style="--angle: 210deg">8. Syaaban</div>
+                    <div class="month-circle-item" style="--angle: 240deg">9. Ramadan</div>
+                    <div class="month-circle-item" style="--angle: 270deg">10. Syawal</div>
+                    <div class="month-circle-item" style="--angle: 300deg">11. Zulkaedah</div>
+                    <div class="month-circle-item" style="--angle: 330deg">12. Zulhijjah</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="8-zulhijjah" class="step content-slide" data-x="0" data-y="7200" data-rotate="0" data-scale="1">
+            <div class="slide-title">8 Zulhijjah</div>
+            <div class="slide-content">
+                <div class="journey-animation">
+                    <div class="hotel">🏨</div>
+                    <div class="bus">🚌</div>
+                    <div class="tent">⛺</div>
+                </div>
+
+                <ul class="journey-steps">
+                    <li>• Make intention (niat) at Miqat (hotel)</li>
+                    <li>• Observe the prohibitions of ihram</li>
+                    <li>• Travel to Arafah</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="ihram-1" class="step content-slide" data-x="0" data-y="8000" data-rotate="0" data-scale="1">
+            <div class="slide-title">Prohibitions of Ihram</div>
+            <div class="slide-content">
+                <ul class="journey-steps">
+                    <li>1. Wearing stitched or body-fitting clothing (for men)</li>
+                    <li>2. Covering the head or any part of it (for men)</li>
+                    <li>3. Covering the face (for women)</li>
+                    <li>4. Wearing gloves</li>
+                    <li>5. Applying oil to the head or beard</li>
+                    <li>6. Wearing or smelling perfume, whether on the body or clothing</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="ihram-2" class="step content-slide" data-x="0" data-y="8800" data-rotate="0" data-scale="1">
+            <div class="slide-title">Prohibitions of Ihram</div>
+            <div class="slide-content">
+                <ul class="journey-steps">
+                    <li>7. Foreplay (acts leading to intercourse)</li>
+                    <li>8. Engaging in sexual intercourse</li>
+                    <li>9. Getting married, officiating a marriage, or acting as a marriage representative</li>
+                    <li>10. Removing hair or body hair</li>
+                    <li>11. Clipping or cutting the nails</li>
+                    <li>12. Cutting down, uprooting, or damaging trees or plants</li>
+                    <li>13. Hunting or killing land game animals</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="ihram-clothes" class="step content-slide" data-x="0" data-y="9600" data-rotate="0" data-scale="1">
+            <div class="slide-title">Ihram Clothes</div>
+            <div class="slide-content">
+                <div class="ihram-images">
+                    <div class="ihram-person">
+                        <img src="pics/ihram-clothes.jpg" alt="Ihram clothes" class="ihram-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="9-zulhijjah" class="step content-slide" data-x="0" data-y="10400" data-rotate="0" data-scale="1">
+            <div class="slide-title">9/10 Zulhijjah</div>
+            <div class="slide-content">
+                <div class="journey-animation">
+                    <div class="tent">⛺</div>
+                    <div class="bus">🚌</div>
+                    <div class="hotel">🌌</div>
+                </div>
+
+                <ul class="journey-steps">
+                    <li>• Stay (Wuquf) in Arafah</li>
+                    <li>• Travel to Muzdalifah</li>
+                    <li>• Overnight Stay (Mabit) in Muzdalifah</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="10-zulhijjah" class="step content-slide" data-x="0" data-y="11200" data-rotate="0" data-scale="1">
+            <div class="slide-title">10/11 Zulhijjah</div>
+            <div class="slide-content">
+                <div class="journey-animation">
+                    <div class="hotel">🌌</div>
+                    <div class="bus">🚌</div>
+                    <div class="tent">⛺</div>
+                </div>
+
+                <ul class="journey-steps">
+                    <li>• Travel to Mina</li>
+                    <li>• Stoning of Jamrah al-Kubra</li>
+                    <li>• Cutting or shaving the hair</li>
+                    <li>• Broke 10 out of the 13 ihram restrictions</li>
+                    <li>• Overnight Stay (Mabit) in Mina</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="11-zulhijjah" class="step content-slide" data-x="0" data-y="12000" data-rotate="0" data-scale="1">
+            <div class="slide-title">11, 12, 13 Zulhijjah</div>
+            <div class="slide-content">
+                <div class="journey-animation">
+                    <div class="tent">⛺</div>
+                    <div class="bus">🚌</div>
+                    <div class="hotel">🏨</div>
+                </div>
+
+                <ul class="journey-steps">
+                    <li>• Stoning of the 3 Jamrah</li>
+                    <li>• Overnight Stay (Mabit) in Mina</li>
+                    <li>• Travel to Makkah (on the 13th)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="14-zulhijjah" class="step content-slide" data-x="0" data-y="12800" data-rotate="0" data-scale="1">
+            <div class="slide-title">After 13 Zulhijjah</div>
+            <div class="slide-content">
+                <div class="final-rituals">
+                    <div class="ritual-item">
+                        <div class="ritual-icon">🕋</div>
+                    </div>
+                    <div class="ritual-item">
+                        <div class="ritual-icon">
+                            <div class="sand-hills">
+                                <div class="sand-hill"></div>
+                                <div class="sand-hill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="journey-steps">
+                    <li>• Circumambulation of the Kaaba (Tawaf)</li>
+                    <li>• Walking between Safa and Marwah (Sa'i)</li>
+                    <li>• Done!</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="masyair-map" class="step content-slide" data-x="0" data-y="13600" data-rotate="0" data-scale="1">
+            <div class="slide-title">Masyair Map</div>
+            <div class="slide-content">
+                <img src="pics/masyair-map.jpg" alt="Masyair Map" class="masyair-image">
+            </div>
+        </div>
+
+        <div id="umrah" class="step content-slide" data-x="0" data-y="14400" data-rotate="0" data-scale="1">
+            <div class="slide-title">Umrah</div>
+            <div class="slide-content">
+                <div class="final-rituals">
+                    <div class="ritual-item">
+                        <div class="ritual-icon">🕋</div>
+                    </div>
+                    <div class="ritual-item">
+                        <div class="ritual-icon">
+                            <div class="sand-hills">
+                                <div class="sand-hill"></div>
+                                <div class="sand-hill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="journey-steps">
+                    <li>• Make intention (niat) at Miqat (Qarnul Manazil/Zulhulaifah/Tan'im)</li>
+                    <li>• Circumambulation of the Kaaba (Tawaf)</li>
+                    <li>• Walking between Safa and Marwah (Sa'i)</li>
+                    <li>• Cutting or shaving the hair</li>
+                    <li>• Done!</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="thank-you" class="step content-slide" data-x="0" data-y="15200" data-rotate="0"
+            data-scale="1">
+            <div class="slide-content">
+                <p>Thank you!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="impress-toolbar"></div>
+<div class="impress-progressbar"><div></div></div>
+<div class="impress-progress"></div>
+<div id="impress-help"></div> -->
+
+    <script type="text/javascript" src="js/impress.js"></script>
+    <script>
+        impress().init();
+
+        // Ka'bah slideshow functionality
+        let currentImageIndex = 1;
+        const images = [
+            {
+                src: "pics/kaabah.jpg",
+                caption: "The Holy Ka'bah in Masjid al-Haram, Makkah"
+            },
+            {
+                src: "pics/kaabah-prayer.jpg",
+                caption: "Pilgrims praying around the Ka'bah"
+            },
+            {
+                src: "pics/kaabah-tawaf.jpg",
+                caption: "Pilgrims performing Tawaf around the Ka'bah"
+            },
+            {
+                src: "pics/masjidil-haram.jpg",
+                caption: " Masjid al-Haram, Makkah"
+            },
+            {
+                src: "pics/masjidil-haram-map.png",
+                caption: "Map of Masjid al-Haram, Makkah"
+            },
+            {
+                src: "pics/mecca-saudi-arabia.png",
+                caption: "Map of Makkah, Saudi Arabia"
+            }
+        ];
+
+        function nextImage(event) {
+            // Prevent event from bubbling up to impress.js navigation
+            event.stopPropagation();
+
+            currentImageIndex = currentImageIndex >= images.length ? 1 : currentImageIndex + 1;
+            showImage(currentImageIndex);
+        }
+
+        function showImage(index) {
+            const img = document.getElementById('kabah-slideshow');
+            const caption = document.getElementById('image-caption');
+
+            // Update image and caption
+            img.src = images[index - 1].src;
+            caption.textContent = images[index - 1].caption;
+        }
+
+        // Timeline animation enhancement
+        function initTimelineAnimation() {
+            const timeline = document.querySelector('.timeline');
+            const progress = document.querySelector('.timeline-progress');
+            const markers = document.querySelectorAll('.timeline-marker');
+            const labels = document.querySelectorAll('.marker-label');
+
+            if (timeline && progress) {
+                // Reset animation when slide comes into view
+                progress.style.animation = 'none';
+                progress.offsetHeight; // Trigger reflow
+                progress.style.animation = 'timelineProgress 8s ease-in-out infinite';
+
+                // Reset markers
+                markers.forEach(marker => {
+                    marker.style.animation = 'none';
+                    marker.offsetHeight; // Trigger reflow
+                    marker.style.animation = 'fadeInUp 0.5s ease-out forwards';
+                });
+
+                // Reset labels
+                labels.forEach(label => {
+                    label.classList.remove('active');
+                });
+
+                // Start label animation sequence
+                startLabelAnimation();
+            }
+        }
+
+        function startLabelAnimation() {
+            const labels = document.querySelectorAll('.marker-label');
+            const timing = [0.5, 2.5, 5, 8]; // Timing in seconds for each label (4 markers now)
+
+            labels.forEach((label, index) => {
+                setTimeout(() => {
+                    label.classList.add('active');
+                }, timing[index] * 1000);
+
+                // All labels stay visible - no hiding
+            });
+        }
+
+        // Initialize timeline animation when the slide is shown
+        document.addEventListener('impress:stepenter', function (event) {
+            if (event.target.id === 'months-of-hajj') {
+                // Reset timeline to hidden state
+                const timeline = document.querySelector('.timeline');
+                if (timeline) {
+                    timeline.classList.remove('show');
+                }
+            }
+        });
+
+        // Add click event to Ka'bah icon
+        document.addEventListener('DOMContentLoaded', function () {
+            const kabahIcon = document.querySelector('.kabah-icon');
+            const timeline = document.querySelector('.timeline');
+
+            if (kabahIcon && timeline) {
+                kabahIcon.addEventListener('click', function () {
+                    // Add clicked animation to Ka'bah icon
+                    this.classList.add('clicked');
+
+                    // Remove clicked class after animation
+                    setTimeout(() => {
+                        this.classList.remove('clicked');
+                    }, 500);
+
+                    // Show timeline
+                    timeline.classList.add('show');
+
+                    // Start timeline animation after a short delay
+                    setTimeout(() => {
+                        initTimelineAnimation();
+                    }, 800);
+                });
+            }
+
+            // Add click event to calendar ring
+            const calendarCircle = document.querySelector('.calendar-circle');
+            if (calendarCircle) {
+                calendarCircle.addEventListener('click', function (e) {
+                    // Check if click is on the ring (not on a month item)
+                    if (e.target === this || e.target.classList.contains('calendar-circle')) {
+                        const monthItems = document.querySelectorAll('.month-circle-item');
+
+                        // Add show class to all month items to trigger animation
+                        monthItems.forEach(item => {
+                            item.classList.add('show');
+                        });
+
+                        // Add a clicked effect to the ring
+                        this.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            this.style.transform = 'scale(1)';
+                        }, 200);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
