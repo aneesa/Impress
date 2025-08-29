@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impress - Interactive Presentations by Aneesa Awaludin</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+        }
+        .presentations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .presentation-card {
+            background: linear-gradient(135deg, #f4d03f 0%, #e67e22 25%, #d35400 50%, #a04000 75%, #8b4513 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .presentation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+        .presentation-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .presentation-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .presentation-description {
+            font-size: 1em;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        .presentation-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .link-button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        .link-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+        .coming-soon {
+            background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+            opacity: 0.7;
+        }
+        .coming-soon:hover {
+            transform: none;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+            color: #666;
+        }
+        .github-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .github-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Impress</h1>
+        <p class="subtitle">Interactive Presentations by Aneesa Awaludin</p>
+        
+        <div class="presentations-grid">
+            <!-- Hajj and Umrah Presentation -->
+            <a href="Hajj-and-Umrah/" class="presentation-card">
+                <div class="presentation-icon">🕋</div>
+                <div class="presentation-title">Hajj and Umrah</div>
+                <div class="presentation-description">
+                    A comprehensive guide to the Islamic pilgrimage, featuring interactive timelines, 
+                    Islamic calendar visualization, and beautiful animations.
+                </div>
+                <div class="presentation-links">
+                    <span class="link-button">View Presentation</span>
+                </div>
+            </a>
+
+            <!-- Template for Future Presentations -->
+            <div class="presentation-card coming-soon">
+                <div class="presentation-icon">📚</div>
+                <div class="presentation-title">Islamic Studies</div>
+                <div class="presentation-description">
+                    Interactive presentations on various Islamic topics, including fiqh, 
+                    hadith, and Islamic history.
+                </div>
+                <div class="presentation-links">
+                    <span class="link-button">Coming Soon</span>
+                </div>
+            </div>
+
+            <!-- Another Template -->
+            <div class="presentation-card coming-soon">
+                <div class="presentation-icon">🌍</div>
+                <div class="presentation-title">World Religions</div>
+                <div class="presentation-description">
+                    Comparative study of world religions with interactive elements 
+                    and cultural insights.
+                </div>
+                <div class="presentation-links">
+                    <span class="link-button">Coming Soon</span>
+                </div>
+            </div>
+
+            <!-- Template for Custom Topics -->
+            <div class="presentation-card coming-soon">
+                <div class="presentation-icon">✨</div>
+                <div class="presentation-title">Your Topic Here</div>
+                <div class="presentation-description">
+                    Use the template to create your own interactive presentation 
+                    with impress.js.
+                </div>
+                <div class="presentation-links">
+                    <span class="link-button">Use Template</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>
+                All presentations are created using <strong>impress.js</strong> for beautiful, 
+                interactive web presentations.
+            </p>
+            <p>
+                View the source code on 
+                <a href="https://github.com/aneesa/Impress" class="github-link" target="_blank">GitHub</a>
+            </p>
+            <p style="margin-top: 20px; font-size: 0.9em;">
+                <strong>Navigation:</strong> Use arrow keys, space, and ESC to navigate through presentations
+            </p>
+        </div>
+    </div>
+</body>
+</html> 
